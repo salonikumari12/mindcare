@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindCare Interactive Tools</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/interactiveTools.css" />
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <div class="img-div"><img src="images/logo.png" alt="" /></div>
+        <div><h2>MindCare</h2></div>
+      </div>
+      <div class="mobile-nav-btn">
+        <button onclick="openNav()"><img src="images/Hamburger_icon.svg.png" alt="" /></button>
+      </div>
+      <div id="mobile-nav" class="mobile-nav">
+        <div class="cross-icon">
+          <button onclick="closeNav()">✖</button>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resourcelibrary.html">Resources Library</a></li>
+          <li><a href="interactiveTools.html" class="active">Interactive Tools</a></li>
+          <li><a href="professionalTools.html">Professional Service</a></li>
+          <li><a href="emergencyService.html">Emergency Service</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- content -->
+  <div class="content">
+    <div class="mood-tracker">
+      <div class="main-title-div"><h2 class="title main-title">Mood Tracker</h2></div>
+      <div class="container">
+        <div class="card graph">
+          <div class="graph-container">
+            <!-- Mood History -->
+            <div class="history">
+              <h2>Mood History</h2>
+              <ul id="mood-history"></ul>
+            </div>
+            <!-- Chart -->
+            <canvas id="mood-chart" width="400" height="200"></canvas>
+          </div>
+
+          <!-- User Input -->
+          <div class="card mood-input-card">
+            <h2>Write What You're Feeling</h2>
+            <textarea id="userFeelingInput" placeholder="Type your thoughts here..."></textarea>
+            <button id="analyzeBtn">Analyze Emotion</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suggestion Box -->
+      <div id="suggestionBox"><p id="suggestionText">Your personalized suggestion will appear here...</p></div>
+    </div>
+
+    <!-- Resources -->
+    <div class="resources-div">
+      <!-- Videos -->
+      <div class="videos-container">
+        <div class="main-title-div"><h2 class="title main-title">Videos</h2></div>
+        <div class="container">
+          <!-- your 6 videos as cards -->
+          <div class="card"><div class="img-div"><video src="videos/Dear Anxiety __ Spoken Word.mp4" controls></video></div><h2 class="title">Dear Anxiety</h2></div>
+          <div class="card"><div class="img-div"><video src="videos/Feeling Lost in Your 20s.mp4" controls></video></div><h2 class="title">Feeling Lost</h2></div>
+          <div class="card"><div class="img-div"><video src="videos/How Stop Over Thinking  _ Buddhism In English.mp4" controls></video></div><h2 class="title">Stop Overthinking</h2></div>
+          <div class="card"><div class="img-div"><video src="videos/Mental Health Awareness.mp4" controls></video></div><h2 class="title">Mental Health Awareness</h2></div>
+          <div class="card"><div class="img-div"><video src="videos/People With Anxiety & Depression Share Advice For Anyone Who s Struggling _ Soul Stories.mp4" controls></video></div><h2 class="title">Anxiety & Depression Advice</h2></div>
+          <div class="card"><div class="img-div"><video src="videos/So, You re Having an Anxiety Attack (The Calm-Down Method for Stopping Anxiety Attacks).mp4" controls></video></div><h2 class="title">Anxiety Attack Calm-Down</h2></div>
+        </div>
+      </div>
+
+      <!-- Articles -->
+      <div class="article-container">
+        <div class="main-title-div"><h2 class="title main-title">Articles</h2></div>
+        <div class="container">
+          <!-- 6 articles -->
+          <div class="card"><a href="articles/managing-anxiety.html"><div class="img-div"><img src="images/article/anxiety.webp" alt=""></div><h2 class="title">Managing Anxiety</h2></a></div>
+          <div class="card"><a href="articles/overcoming-depression.html"><div class="img-div"><img src="images/article/depression.webp" alt=""></div><h2 class="title">Overcoming Depression</h2></a></div>
+          <div class="card"><a href="articles/living-with-ocd.html"><div class="img-div"><img src="images/article/ocd.webp" alt=""></div><h2 class="title">Living with OCD</h2></a></div>
+          <div class="card"><a href="articles/understanding-ptsd.html"><div class="img-div"><img src="images/article/ptsd.webp" alt=""></div><h2 class="title">Understanding PTSD</h2></a></div>
+          <div class="card"><a href="articles/managing-bipolar-disorder.html"><div class="img-div"><img src="images/article/bipolar.webp" alt=""></div><h2 class="title">Managing Bipolar Disorder</h2></a></div>
+          <div class="card"><a href="articles/feeling-like-a-future.html"><div class="img-div"><img src="images/article/feeling like a failure.webp" alt=""></div><h2 class="title">Feeling Like a Failure</h2></a></div>
+        </div>
+      </div>
+
+      <!-- Podcasts -->
+      <div class="podcast-container">
+        <div class="main-title-div"><h2 class="title main-title">Podcasts</h2></div>
+        <div class="container">
+          <!-- 6 podcasts -->
+          <div class="card"><a href="podcast/podcast.html?index=0"><div class="img-div"><img src="podcast/assets/images/1.webp" alt=""></div><h2 class="title">Peterson on Depression</h2></a></div>
+          <div class="card"><a href="podcast/podcast.html?index=1"><div class="img-div"><img src="podcast/assets/images/2.webp" alt=""></div><h2 class="title">Kristen Bell Anxiety Talk</h2></a></div>
+          <div class="card"><a href="podcast/podcast.html?index=2"><div class="img-div"><img src="podcast/assets/images/3.webp" alt=""></div><h2 class="title">Are You Okay?</h2></a></div>
+          <div class="card"><a href="podcast/podcast.html?index=3"><div class="img-div"><img src="podcast/assets/images/4.webp" alt=""></div><h2 class="title">When You Feel Like Quitting</h2></a></div>
+          <div class="card"><a href="podcast/podcast.html?index=4"><div class="img-div"><img src="podcast/assets/images/5.webp" alt=""></div><h2 class="title">Complex PTSD in 5 Min</h2></a></div>
+          <div class="card"><a href="podcast/podcast.html?index=5"><div class="img-div"><img src="podcast/assets/images/6.webp" alt=""></div><h2 class="title">What is Depression?</h2></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emotion Modal -->
+  <div id="emotionModal" class="emotion-modal">
+    <div class="emotion-modal-content">
+      <h2>Your Emotion Analysis</h2>
+      <p id="emotionResultText"></p>
+      <button id="closeEmotionBtn">OK</button>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer-section">
+    <div class="container">
+      <div class="card"><div class="first-section"><div class="img-div"><img src="images/logo.png" alt="" /></div><h2 class="title">MindCare</h2></div></div>
+      <div class="card quick-links-section">
+        <h2>QUICK LINKS</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resourcelibrary.html">Resources Library</a></li>
+          <li><a href="interactiveTools.html">Interactive Tools</a></li>
+          <li><a href="professionalTools.html">Professional Service</a></li>
+          <li><a href="emergencyService.html">Emergency Service</a></li>
+        </ul>
+      </div>
+      <div class="card social-media-section">
+        <h2>Socials</h2>
+        <div class="social-medias">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-footer"><h2>Copyright © 2025 <span>MindCare</span>. All Rights Reserved</h2></div>
+
+<script>
+  let moodChart;
+
+  function openNav(){document.getElementById("mobile-nav").classList.add("active")}
+  function closeNav(){document.getElementById("mobile-nav").classList.remove("active")}
+
+  // Update history
+  function updateMoodHistory() {
+    const moodHistory = document.getElementById("mood-history");
+    const moods = JSON.parse(localStorage.getItem("moodTracker")) || [];
+    moodHistory.innerHTML = "";
+    moods.slice(-5).reverse().forEach(entry => {
+      const li = document.createElement("li");
+      li.textContent = `${entry.date} ${entry.time}: ${entry.mood}`;
+      moodHistory.appendChild(li);
+    });
+  }
+
+  // Update chart
+  function updateChart() {
+    const ctx = document.getElementById("mood-chart").getContext("2d");
+    const moods = JSON.parse(localStorage.getItem("moodTracker")) || [];
+    const moodCounts = {Anger:0, Anxiety:0, Stress:0};
+    moods.forEach(m => { if(moodCounts[m.mood]!==undefined) moodCounts[m.mood]++; });
+
+    if (moodChart) {
+      moodChart.data.datasets[0].data = Object.values(moodCounts);
+      moodChart.update();
+    } else {
+      moodChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: Object.keys(moodCounts),
+          datasets: [{ label:"Mood Frequency", data:Object.values(moodCounts),
+            backgroundColor:["#e74c3c","#3498db","#2ecc71"] }]
+        },
+        options: {
+    responsive: true,
+    plugins: {
+        tooltip: {
+            enabled: true,
+            callbacks: {
+                label: function(context) {
+                    return `${context.label}: ${context.parsed.y}`;
+                }
+            }
+        }
+    },
+    scales: {
+        y: { beginAtZero: true }
+    }
+}
+
+      });
+    }
+  }
+
+  // Suggestions
+  function updateSuggestion(mood){
+    const box=document.getElementById("suggestionBox");
+    const text=document.getElementById("suggestionText");
+    if(mood==="Anger"){box.style.background="#ffcccc"; text.textContent="Try deep breathing or a walk."}
+    else if(mood==="Anxiety"){box.style.background="#cce5ff"; text.textContent="Practice mindfulness or grounding."}
+    else if(mood==="Stress"){box.style.background="#d4f4dd"; text.textContent="Take a break and stretch."}
+    else{box.style.background="#f0f0f0"; text.textContent="Your personalized suggestion will appear here."}
+  }
+
+  // Analyze
+  document.getElementById("analyzeBtn").addEventListener("click", ()=>{
+    const input=document.getElementById("userFeelingInput").value.trim();
+    if(!input){alert("Please write your feelings first!"); return;}
+    fetch("http://127.0.0.1:5000/predict",{
+      method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({text:input})
+    })
+    .then(r=>r.json()).then(data=>{
+      const labelMap={"LABEL_0":"Anger","LABEL_1":"Anxiety","LABEL_2":"Stress"};
+      const mood=labelMap[data.label]||"Unknown";
+      // Save
+      const now=new Date();
+      const moods=JSON.parse(localStorage.getItem("moodTracker"))||[];
+      moods.push({date:now.toLocaleDateString(),time:now.toLocaleTimeString(),mood});
+      localStorage.setItem("moodTracker",JSON.stringify(moods));
+      // Update UI
+      updateMoodHistory(); updateChart(); updateSuggestion(mood);
+      document.getElementById("emotionResultText").innerHTML=`Predicted Emotion: <b>${mood}</b>`;
+      document.getElementById("emotionModal").style.display="flex";
+    })
+    .catch(err=>{console.error(err); alert("Error analyzing mood");});
+  });
+
+  document.getElementById("closeEmotionBtn").addEventListener("click",()=>{document.getElementById("emotionModal").style.display="none";});
+
+  document.addEventListener("DOMContentLoaded",()=>{updateMoodHistory(); updateChart();});
+</script>
+</body>
+</html>
